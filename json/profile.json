@@ -1,10 +1,29 @@
 {
   "name": "Manuel Vega",
+  "photo-url": "/img/1678922771285.jpg", 
   "headline": "FullStack Mid-level Web Dev",
   "birthplace": "Neiva - Huila",
   "email": "hi@manuelvega.dev",
   "birthday": "1999-04-20",
-  "about": "FullStack Web Developer, with 3 years of work experience and 5 years in the code world.\nMy specialty is front-end development with JavaScript technologies like React.\nI'm a self-taught person with great learning ability.\nI have a basic-intermediate level of English (listening and speaking).",
+  "about": "4+ years of work experience and 5+ years in the code world.\nMy specialty is front-end development with JavaScript technologies like React.",
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/manuelvegadev"
+    },
+    {
+      "name": "",
+      "url": "https://gitlab.com/manuelvega.dev"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/manuelvegadev/"
+    },
+    {
+      "name": "Twitter",
+      "url": ""
+    }
+  ],
   "work-experience": [
     {
       "title": "Full-stack Developer",
@@ -12,8 +31,8 @@
       "company-name": "TicketSOFT Colombia SAS",
       "location": "Colombia",
       "location-type": "Remote",
-      "from": "2021-07-01",
-      "to": "",
+      "start-date": "2021-07-01",
+      "end-date": "",
       "industry": "Software Development",
       "description": "Develop and maintain features of a web dashboard written on the back in PHP and Codeigniter, and on the front with JS and JQuery.\nMaking from scratch new dashboards, APIRest and Telegram Bots. All these are written in JS with Node and React.",
       "profile-headline": "FullStack Mid-level Web Dev",
@@ -37,8 +56,8 @@
       "company-name": "Kayros Technologies",
       "location": "Neiva",
       "location-type": "Hybrid",
-      "from": "2018-06-01",
-      "to": "",
+      "start-date": "2018-06-01",
+      "end-date": "",
       "industry": "Software Development",
       "description": "Design, develop and deploy landing pages, inventory systems, and online store websites from scratch.\nRe-design UI & UX for old websites.",
       "profile-headline": "FullStack Mid-level Web Dev",
@@ -55,8 +74,8 @@
       "company-name": "Perficient Latin America",
       "location": "Colombia",
       "location-type": "Remote",
-      "from": "2022-06-01",
-      "to": "2023-04-01",
+      "start-date": "2022-06-01",
+      "end-date": "2023-04-01",
       "industry": "",
       "description": "",
       "profile-headline": "",
@@ -68,8 +87,8 @@
       "company-name": "RC Tecnologías",
       "location": "Neiva, Huila, Colombia",
       "location-type": "On-site",
-      "from": "2021-07-01",
-      "to": "2022-06-01",
+      "start-date": "2021-07-01",
+      "end-date": "2022-06-01",
       "industry": "",
       "description": "Develop and do maintenance websites for different companies in LA.",
       "profile-headline": "",
@@ -87,8 +106,8 @@
       "company-name": "DevCode",
       "location": "Neiva",
       "location-type": "On-site",
-      "from": "2019-06-01",
-      "to": "2021-09-01",
+      "start-date": "2019-06-01",
+      "end-date": "2021-09-01",
       "industry": "",
       "description": "Create, and deploy online stores, car dealers, and websites from scratch and designs in Figma.\nOptimize SEO and performance websites.\nWas developed a custom CSS library for the styles, based on Material Design.\nMost clients were from USA and Canada, therefore the main language for the UI was American English.",
       "profile-headline": "",
