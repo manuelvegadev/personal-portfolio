@@ -92,6 +92,10 @@ $container-max-widths: (
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -101,7 +105,8 @@ body {
 body {
   min-height: 100vh;
   color: rgb(var(--foreground-rgb));
-  background: #191A19;
+  background: #19191c;
+  
 }
 
 a {
@@ -120,7 +125,7 @@ button {
 }
 
 .hhh::after {
-  content: '';
+  //content: '';
   display: block;
   width: 100%;
   position: absolute;
@@ -131,34 +136,36 @@ button {
                   to bottom,
                   rgba(25, 26, 25, 1) 0%,
                   rgba(25, 26, 25, .75) 10%,
-                  rgba(25, 26, 25, .15) 50%,
+                  rgba(25, 26, 25, .2) 40%,
                   rgba(25, 26, 25, .5) 70%,
-                  rgba(25, 26, 25, .75) 80%,
-                  rgba(25, 26, 25, .9) 90%,
+                  rgba(25, 26, 25, .65) 80%,
+                  rgba(25, 26, 25, .80) 90%,
                   rgba(25, 26, 25, 1) 100%
   );
   z-index: -1;
-  outline: 80px solid rgba(25, 26, 25, 1);
+  //outline: 80px solid rgba(25, 26, 25, 1);
 }
 
-.hhh::before {
-  content: '';
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url("/img/gradient-3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  z-index: -1;
-  filter: grayscale(60%) blur(20px) hue-rotate(-80deg);
-  width: 100vw;
-  object-position: center;
-  object-fit: contain;
+.hhh {
+  position: relative;
+  overflow: hidden;
 }
+
+//.hhh::before {
+//  content: '';
+//  display: block;
+//  position: absolute;
+//  inset: 0;
+//  //object-position: center;
+//  //object-fit: cover;
+//  background-size: 100%;
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-image: url("https://resources.jetbrains.com/cai/eidos_231/intellij-idea/201.png");
+//  //filter: blur(10px);
+//  transform: scale(-1, 1);
+//  z-index: -1;
+//}
 
 .we-mark {
   position: relative;
@@ -170,12 +177,12 @@ button {
   
   .dot {
     position: absolute;
-    left: -.25rem;
-    top: calc(50% + .5rem + .25rem);
+    left: -2px;
+    top: calc(50% + .5rem + 6px);
     border-radius: 1rem;
-    width: .75rem;
-    height: .75rem;
-    background-color: #252625;
+    width: 6px;
+    height: 6px;
+    background-color: #999;
   }
 }
 
@@ -186,18 +193,18 @@ button {
   left: 0;
   top: 0;
   bottom: -2rem;
-  width: .25rem;
-  background-color: #252625;
+  width: 2px;
+  background-color: #999;
   z-index: -1;
 }
 
 .we-mark:first-of-type::before {
-  background: linear-gradient(to top, #252625, #252625, transparent);
+  background: linear-gradient(to top, #999, #999, transparent);
 }
 
 .we-mark.last::before {
   bottom: 0;
-  background: linear-gradient(to bottom, #252625, #252625, transparent);
+  background: linear-gradient(to bottom, #999, #999, transparent);
 }
 
 .we-mark::after {
@@ -206,8 +213,8 @@ button {
   position: absolute;
   left: 0;
   top: calc(50% + 1rem);
-  height: .25rem;
+  height: 2px;
   right: -2rem;
-  background-color: #252625;
+  background-color: #999;
   z-index: -1;
 }
