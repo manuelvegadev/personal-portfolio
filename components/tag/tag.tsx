@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 import styles from "./tag.module.scss";
 
 interface ITagProps {
@@ -7,7 +7,7 @@ interface ITagProps {
 }
 
 export function Tag({ children, hoverColor }: ITagProps) {
-  const customStyles: CSSProperties = {};
+  const customStyles: { [key: string]: string } = {};
 
   if (hoverColor) {
     customStyles["--hover-color"] = `var(--color-${hoverColor})`;
