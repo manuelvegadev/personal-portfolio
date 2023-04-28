@@ -1,7 +1,7 @@
 {
   "name": "Manuel Vega",
   "photo-url": "/img/1678922771285.jpg", 
-  "headline": "FullStack Mid-level Web Dev",
+  "headline": "FullStack JavaScript Developer",
   "birthplace": "Neiva - Huila",
   "email": "hi@manuelvega.dev",
   "birthday": "1999-04-20",
@@ -47,7 +47,7 @@
         "Raspberry Pi",
         "jQuery",
         "HTML5",
-        "Cascading Style Sheets (CSS)"
+        "CSS"
       ]
     },
     {
@@ -116,8 +116,8 @@
         "PHP",
         "MySQL",
         "jQuery",
-        "Search Engine Optimization (SEO)",
-        "Figma (Software)"
+        "SEO",
+        "Figma"
       ]
     }
   ],

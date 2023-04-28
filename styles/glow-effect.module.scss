@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.effect {
+  content: '';
+  opacity: 0;
+  display: block;
+  width: 200vw;
+  aspect-ratio: 1/1;
+  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 50%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  :hover > & {
+    opacity: 1;
+  }
+}

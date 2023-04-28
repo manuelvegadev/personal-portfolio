@@ -1,16 +1,13 @@
 import classNames from "classnames";
-import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import { Profile } from "@/types";
 
-const fontSans = IBM_Plex_Sans({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 const fontMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-export function Hero({ data }) {
+export function Hero({ data }: { data: Profile }) {
   return (
     <div className={"hhh"} style={{ paddingTop: "4rem" }}>
       <video
@@ -65,7 +62,14 @@ export function Hero({ data }) {
             >
               {data.headline}
             </h2>
-            <p className={classNames(["fs-6", "my-4"])}>{data.about}</p>
+            <p
+              className={classNames(["fs-6", "my-4"])}
+              style={{
+                textShadow: "0 0 5px rgba(0,0,0,.5)",
+              }}
+            >
+              {data.about}
+            </p>
 
             <div className={"d-flex gap-2 w-100 fs-4"}>
               {data.links.map((link, index) => {
