@@ -97,8 +97,9 @@ export function Hero({ data }: { data: Profile }) {
                       "d-inline-flex",
                     ])}
                     style={{ aspectRatio: "1" }}
+                    aria-label={"Link to " + link.name}
                   >
-                    <i className={`bi bi-${link.name.toLowerCase()}`}></i>
+                    <i className={`bi bi-${link.name.toLowerCase()}`} />
                   </a>
                 ) : null;
               })}
