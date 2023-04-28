@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { JetBrains_Mono } from "next/font/google";
 import { Profile } from "@/types";
+import { useEffect, useState } from "react";
 
 const fontMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -8,10 +9,16 @@ const fontMono = JetBrains_Mono({
 });
 
 export function Hero({ data }: { data: Profile }) {
+  const [videoSrc, setVideoSrc] = useState("");
+
+  useEffect(() => {
+    setVideoSrc("/vid/back.mov");
+  }, []);
+
   return (
     <div className={"hhh"} style={{ paddingTop: "4rem" }}>
       <video
-        src="/vid/back.mov"
+        src={videoSrc}
         autoPlay
         loop
         muted
@@ -23,7 +30,9 @@ export function Hero({ data }: { data: Profile }) {
           width: "100%",
           filter: "blur(30px)",
           transform: "scale(-1, 1) translateY(-50%)",
+          backgroundColor: "#42428d",
         }}
+        poster={"/img/back-cover.jpg"}
       />
       <div className={"container"}>
         <section
