@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generatePalette": "node ./scripts/generate-color-palette.mjs"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.2.6",
     "@popperjs/core": "^2.11.7",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",

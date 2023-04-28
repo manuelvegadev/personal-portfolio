@@ -6,6 +6,7 @@
   "email": "hi@manuelvega.dev",
   "birthday": "1999-04-20",
   "about": "4+ years of work experience and 5+ years in the code world.\nMy specialty is front-end development with JavaScript technologies like React.",
+  "theme-color": "#38abe4",
   "links": [
     {
       "name": "GitHub",
