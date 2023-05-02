@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { Tag } from "@/components";
 import { WorkExperience } from "@/types";
+import { getExperienceDuration } from "@/modules/experience/utils";
 
 interface IExperienceCardProps {
   experience: WorkExperience;
@@ -10,7 +11,8 @@ export function ExperienceCard({ experience }: IExperienceCardProps) {
   return (
     <div
       className={classNames([
-        "p-5",
+        "p-4",
+        "p-sm-5",
         "rounded-3",
         "d-flex",
         "gap-4",
@@ -30,6 +32,11 @@ export function ExperienceCard({ experience }: IExperienceCardProps) {
           {" - "}
           {experience["company-name"]}
         </span>
+      </span>
+      <span
+        className={classNames(["opacity-75", "d-inline-block", "d-md-none"])}
+      >
+        {getExperienceDuration(experience)}
       </span>
       {experience.description ? (
         <p className={classNames(["fs-6", "m-0", "opacity-75"])}>

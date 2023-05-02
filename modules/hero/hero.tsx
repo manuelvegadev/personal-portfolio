@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import { JetBrains_Mono } from "next/font/google";
 import { Profile } from "@/types";
-import { useEffect, useState } from "react";
+import styles from "./hero.module.scss";
+import { Button } from "@/components";
 
 const fontMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -9,30 +10,15 @@ const fontMono = JetBrains_Mono({
 });
 
 export function Hero({ data }: { data: Profile }) {
-  const [videoSrc, setVideoSrc] = useState("");
-
-  useEffect(() => {
-    setVideoSrc("/vid/back.mov");
-  }, []);
-
   return (
-    <div className={"hhh"} style={{ paddingTop: "4rem" }}>
+    <div className={classNames(styles.hero)}>
       <video
-        src={videoSrc}
+        className={classNames(styles.hero__video)}
+        src={"/vid/back.mov"}
+        poster={"/img/back-cover.jpg"}
         autoPlay
         loop
         muted
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: 0,
-          zIndex: -1,
-          width: "100%",
-          filter: "blur(30px)",
-          transform: "scale(-1, 1) translateY(-50%)",
-          backgroundColor: "#42428d",
-        }}
-        poster={"/img/back-cover.jpg"}
       />
       <div className={"container"}>
         <section
@@ -40,12 +26,18 @@ export function Hero({ data }: { data: Profile }) {
             "row",
             "align-content-center",
             "align-items-center",
+            styles.hero__row,
           ])}
-          style={{
-            padding: "10rem 0",
-          }}
         >
-          <div className={classNames(["col", "col-5"])}>
+          <div
+            className={classNames([
+              "col",
+              "col-10",
+              "col-lg-5",
+              "offset-1",
+              "offset-md-0",
+            ])}
+          >
             <span className={classNames(["fs-5"])}>Hello, I&apos;m</span>
             <h1
               className={classNames([
@@ -103,29 +95,21 @@ export function Hero({ data }: { data: Profile }) {
                   </a>
                 ) : null;
               })}
-              <button
-                className={classNames([
-                  "d-flex",
-                  "align-items-center",
-                  "justify-content-center",
-                  "lh-1",
-                  "bg-white",
-                  "text-dark",
-                  "border-0",
-                  "d-inline-flex",
-                  "py-2",
-                  "px-3",
-                  "rounded-3",
-                  "gap-2",
-                ])}
-                style={{ fontSize: ".75em", cursor: "pointer" }}
-              >
-                <i className="bi bi-whatsapp"></i>Contact me!
-              </button>
+              <Button>
+                <i className="bi bi-whatsapp" />
+                Contact me!
+              </Button>
             </div>
           </div>
           <div
-            className={classNames(["col", "col-4", "offset-2", "text-center"])}
+            className={classNames([
+              "col",
+              "col-4",
+              "offset-2",
+              "text-center",
+              "d-none",
+              "d-md-block",
+            ])}
           >
             <img
               className={classNames(["rounded-circle", "w-100"])}

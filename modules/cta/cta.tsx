@@ -15,8 +15,14 @@ export function Cta() {
           "py-4",
           "d-flex",
           "justify-content-center",
+          "text-center",
+          "text-md-start",
           "align-items-center",
+          "flex-wrap",
+          "flex-md-no-wrap",
           "gap-4",
+          "px-5",
+          "px-md-0",
         ])}
         onMouseEnter={() => {
           setButtonAnimationClassName("animate__tada");

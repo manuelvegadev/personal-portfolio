@@ -41,7 +41,7 @@ export function Header() {
           <span style={{ letterSpacing: "-.25rem" }}>:.:</span> manuelvega
           <span style={{ color: "var(--color-primary)" }}>.dev</span>
         </a>
-        <nav>
+        <nav className={classNames(["d-none", "d-lg-block"])}>
           <ul
             className={classNames([
               "d-flex",

@@ -2,7 +2,8 @@ import classNames from "classnames";
 import { Fragment } from "react";
 import { Profile } from "@/types";
 import { ExperienceCard } from "@/modules/experience/sub-components";
-import { formatDate } from "@/utils";
+import { getExperienceDuration } from "@/modules/experience/utils";
+import styles from "./experience.module.scss";
 
 export function Experience({ data }: { data: Profile }) {
   return (
@@ -11,7 +12,13 @@ export function Experience({ data }: { data: Profile }) {
         <section className="row">
           <div className={classNames(["col-12", "mb-5"])}>
             <h2
-              className={classNames(["fs-1", "fw-light", "my-5", "font-mono"])}
+              className={classNames([
+                "fs-1",
+                "fw-light",
+                "my-0",
+                "my-sm-5",
+                "font-mono",
+              ])}
             >
               👨‍💻{" "}
               <a
@@ -23,14 +30,7 @@ export function Experience({ data }: { data: Profile }) {
               </a>
             </h2>
           </div>
-          <div
-            className={classNames(["col"])}
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto 1fr",
-              gap: "2rem",
-            }}
-          >
+          <div className={classNames([styles.experiences, "col"])}>
             {data["work-experience"].map((experience, index, array) => {
               return (
                 <Fragment key={index}>
@@ -41,12 +41,14 @@ export function Experience({ data }: { data: Profile }) {
                     ])}
                   >
                     <span className="dot" />
-                    <span className={classNames(["opacity-75"])}>
-                      {formatDate(experience["start-date"])}
-                      {" - "}
-                      {experience["end-date"]
-                        ? formatDate(experience["end-date"])
-                        : "Present"}
+                    <span
+                      className={classNames([
+                        "opacity-75",
+                        "d-none",
+                        "d-md-inline-block",
+                      ])}
+                    >
+                      {getExperienceDuration(experience)}
                     </span>
                   </div>
                   <ExperienceCard experience={experience} />

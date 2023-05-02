@@ -1,0 +1,13 @@
+@import '@/styles/mixins';
+
+.experiences {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 2rem;
+  padding: 0 1rem;
+  
+  @include respond-above(sm) {
+    column-gap: 2rem;
+    padding: 0;
+  }
+}
