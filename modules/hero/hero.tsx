@@ -38,7 +38,7 @@ export function Hero({ data }: { data: Profile }) {
               "offset-md-0",
             ])}
           >
-            <span className={classNames(["fs-5"])}>Hello, I&apos;m</span>
+            <span className={classNames(["fs-5"])}>👋 Hello, I&apos;m</span>
             <h1
               className={classNames([
                 "fw-bold",
@@ -47,7 +47,7 @@ export function Hero({ data }: { data: Profile }) {
                 fontMono.className,
               ])}
               style={{
-                fontSize: "calc(2.75rem + 1.5vw)",
+                fontSize: "calc(2.5rem + 1.5vw)",
                 textShadow: "0 0 10px rgba(0,0,0,.25)",
                 marginLeft: "-.25rem",
               }}
@@ -55,7 +55,7 @@ export function Hero({ data }: { data: Profile }) {
               {data.name.trim().replaceAll(" ", "_")}
             </h1>
             <h2
-              className={classNames(["fw-semibold", "fs-3"])}
+              className={classNames(["fw-semibold", "fs-4"])}
               style={{
                 color: "white",
                 textShadow: "0 0 10px rgba(0,0,0,.25)",
@@ -108,7 +108,7 @@ export function Hero({ data }: { data: Profile }) {
               "offset-2",
               "text-center",
               "d-none",
-              "d-md-block",
+              "d-lg-block",
             ])}
           >
             <img

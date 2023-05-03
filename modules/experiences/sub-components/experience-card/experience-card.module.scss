@@ -1,0 +1,39 @@
+@import '@/styles/mixins';
+
+.experience-card {
+  position: relative;
+
+  @include respond-below(sm) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: calc(100% + 4rem);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #999;
+      z-index: -1;
+    }
+  }
+}
+
+.future-emoji,
+.beginnings-emoji {
+  font-size: 2rem;
+  position: absolute;
+  bottom: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  @include respond-above(sm) {
+    display: none;
+  }
+}
+
+.future-emoji {
+}
+
+.beginnings-emoji {
+  bottom: auto;
+  top: calc(100% + 1rem);
+}

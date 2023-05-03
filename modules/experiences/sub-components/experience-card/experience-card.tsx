@@ -1,16 +1,26 @@
 import classNames from "classnames";
 import { Tag } from "@/components";
 import { WorkExperience } from "@/types";
-import { getExperienceDuration } from "@/modules/experience/utils";
+import { getExperienceDuration } from "@/modules/experiences/utils";
+import styles from "./experience-card.module.scss";
 
 interface IExperienceCardProps {
   experience: WorkExperience;
+  isLast?: boolean;
+  isFirst?: boolean;
 }
 
-export function ExperienceCard({ experience }: IExperienceCardProps) {
+export function ExperienceCard({
+  experience,
+  isLast,
+  isFirst,
+}: IExperienceCardProps) {
   return (
     <div
       className={classNames([
+        styles["experience-card"],
+        { [styles["experience-card--last"]]: isLast },
+        { [styles["experience-card--first"]]: isFirst },
         "p-4",
         "p-sm-5",
         "rounded-3",
@@ -24,6 +34,8 @@ export function ExperienceCard({ experience }: IExperienceCardProps) {
         border: "1px solid var(--color-primary)",
       }}
     >
+      {isFirst ? <span className={styles["future-emoji"]}>🚀</span> : null}
+      {isLast ? <span className={styles["beginnings-emoji"]}>👶</span> : null}
       <span className={classNames(["fs-5", "fw-bold", "font-mono"])}>
         {experience.title}
         <span

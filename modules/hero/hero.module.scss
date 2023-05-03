@@ -7,7 +7,7 @@
   
   &__video {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -15,7 +15,7 @@
     object-fit: cover;
     object-position: center;
     filter: blur(30px);
-    transform: scale(-1, 1) translateY(-50%);
+    transform: scale(-1, 1);
     background-color: rgb(66, 66, 141);
   }
   

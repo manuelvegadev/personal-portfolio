@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 import { GetStaticProps } from "next";
 import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import classNames from "classnames";
-import { Cta, Experience, Header, Hero, Footer } from "@/modules";
+import { Cta, Experiences, Header, Hero, Footer } from "@/modules";
 import { Profile } from "@/types";
 import Head from "next/head";
 
@@ -28,7 +28,7 @@ export default function Home({ data }: { data: Profile }) {
       <Header />
       <Hero data={data} />
       <Cta />
-      <Experience data={data} />
+      <Experiences data={data} />
       <Footer />
     </main>
   );

@@ -1,0 +1,81 @@
+@import '@/styles/mixins';
+
+.experiences {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 2rem;
+  
+  @include respond-below(sm) {
+    grid-template-columns: 1fr;
+  }
+  
+  @include respond-above(sm) {
+    column-gap: 2rem;
+  }
+}
+
+
+.we-mark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+
+  @include respond-below(sm) {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background-color: #999 ;
+    z-index: -1;
+  }
+
+  &--first::before {
+    background: linear-gradient(to top, #999, #999, transparent 90%);
+    content: '🚀';
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--last::before {
+    content: '👶';
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
+    background: linear-gradient(to bottom, #999, #999, transparent 85%);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1rem);
+    height: 2px;
+    right: -2rem;
+    background-color: #999;
+    z-index: -1;
+  }
+
+  &__dot {
+    position: absolute;
+    left: -4px;
+    top: calc(50% + .5rem + 4px);
+    border-radius: 1rem;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+  }
+}
