@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Personal Portfolio",
+  name: "[3001] Personal Portfolio",
   script: "serve",
   env: {
     PM2_SERVE_PATH: "prod",
