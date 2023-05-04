@@ -112,13 +112,13 @@ export function Hero({ data }: { data: Profile }) {
             ])}
           >
             <img
-              className={classNames(["rounded-circle", "w-100"])}
+              className={classNames([
+                styles["hero__profile-photo"],
+                "rounded-circle",
+                "w-100",
+              ])}
               src={data["photo-url"]}
               alt={"Profile picture"}
-              style={{
-                boxShadow: "0 0 10px rgba(0,0,0,.25)",
-                aspectRatio: "1/1 !important",
-              }}
             />
           </div>
         </section>
