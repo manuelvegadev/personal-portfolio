@@ -56,7 +56,7 @@ export function ExperienceCard({
       <span
         className={classNames(["opacity-75", "d-inline-block", "d-md-none"])}
       >
-        {experienceDuration}
+        {experienceDuration}\
       </span>
       {experience.description ? (
         <p className={classNames(["fs-6", "m-0", "opacity-75"])}>

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { Profile } from "@/types";
 import styles from "./experiences.module.scss";
-import { Experience } from "@/modules/experiences/sub-components/experience/experience";
+import { Experience } from "./sub-components";
 
 export function Experiences({ data }: { data: Profile }) {
   return (
