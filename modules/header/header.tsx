@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 export function Header() {
   const { asPath } = useRouter();
   const [currentHash, setCurrentHash] = useState(asPath.split("/").at(-1));
-  console.log(currentHash);
 
   const navItems = [
     { href: "#", text: "Home" },
@@ -39,7 +38,7 @@ export function Header() {
       >
         <a href="#" className={"font-mono"}>
           <span style={{ letterSpacing: "-.25rem" }}>:.:</span> manuelvega
-          <span style={{ color: "var(--color-primary)" }}>.dev</span>
+          <span className={styles.header__logo__domain}>.dev</span>
         </a>
         <nav className={classNames(["d-none", "d-lg-block"])}>
           <ul

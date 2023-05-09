@@ -1,15 +1,16 @@
 @import "@/styles/mixins";
 
 .hero {
+  margin-top: -4rem;
   padding-top: 4rem; // The height of the navbar
   position: relative;
   overflow: hidden;
+  color: white;
   
   &__profile-photo {
-    box-shadow: 0 0 30px rgba(0,0,0,.15);
+    box-shadow: 0 0 30px rgba(black, .15);
     aspect-ratio: 1/1 !important;
-    background-color: rgba(255,255,255,.25);
-    backdrop-filter: blur(5px);
+    background-color: rgba(white, .25);
   }
   
   &__video {
@@ -21,9 +22,18 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: blur(30px);
     transform: scale(-1, 1);
-    background-color: rgb(66, 66, 141);
+    background-color: rgb(66, 66, 141); // The average color of the video
+  }
+  
+  &__video-backdrop-filter {
+    position: absolute;
+    top: -4rem;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    backface-visibility: hidden;
+    z-index: -1;
   }
   
   &__row {

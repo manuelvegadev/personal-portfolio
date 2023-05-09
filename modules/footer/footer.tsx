@@ -13,6 +13,7 @@ export function Footer() {
               "justify-content-center",
               "align-items-center",
             ])}
+            target={"_blank"}
           >
             <span className={"bi bi-github"} />
             Github

@@ -1,13 +1,8 @@
+import Image from "next/image";
 import classNames from "classnames";
-import { JetBrains_Mono } from "next/font/google";
+import { Button } from "@/components";
 import { Profile } from "@/types";
 import styles from "./hero.module.scss";
-import { Button } from "@/components";
-
-const fontMono = JetBrains_Mono({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export function Hero({ data }: { data: Profile }) {
   return (
@@ -20,6 +15,7 @@ export function Hero({ data }: { data: Profile }) {
         loop
         muted
       />
+      <div className={classNames(styles["hero__video-backdrop-filter"])} />
       <div className={"container"}>
         <section
           className={classNames([
@@ -40,16 +36,12 @@ export function Hero({ data }: { data: Profile }) {
           >
             <span className={classNames(["fs-5"])}>👋 Hello, I&apos;m</span>
             <h1
-              className={classNames([
-                "fw-bold",
-                "fst-italic",
-                "my-1",
-                fontMono.className,
-              ])}
+              className={classNames(["fw-bold", "fst-italic", "my-1"])}
               style={{
                 fontSize: "calc(2.5rem + 1.5vw)",
                 textShadow: "0 0 10px rgba(0,0,0,.25)",
                 marginLeft: "-.25rem",
+                fontFamily: "var(--font-mono)",
               }}
             >
               {data.name.trim().replaceAll(" ", "_")}
@@ -111,7 +103,7 @@ export function Hero({ data }: { data: Profile }) {
               "d-lg-block",
             ])}
           >
-            <img
+            <Image
               className={classNames([
                 styles["hero__profile-photo"],
                 "rounded-circle",
@@ -119,6 +111,8 @@ export function Hero({ data }: { data: Profile }) {
               ])}
               src={data["photo-url"]}
               alt={"Profile picture"}
+              width={322}
+              height={322}
             />
           </div>
         </section>

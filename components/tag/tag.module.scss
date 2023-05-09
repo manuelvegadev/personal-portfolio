@@ -1,11 +1,14 @@
+@import "@/styles/variables";
+
 .tag {
-  border: 1px solid rgba(255,255,255,.25);
+  border: 1px solid rgba(white, .25);
   padding: .25em .75em;
   border-radius: 1em;
   font-size: .85em;
   transition: 150ms ease-in-out;
   user-select: none;
   cursor: default;
+  background-color: $color-surface;
   
   &:hover {
     border-color: var(--hover-color);

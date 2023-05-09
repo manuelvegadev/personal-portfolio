@@ -1,9 +1,11 @@
+@import "@/styles/variables";
+
 .cta {
   background-color: white;
   color: #1c1e21;
   transition: background-color 300ms ease-in-out;
   
   &:hover {
-    background-color: var(--color-whatsapp);
+    background-color: $color-whatsapp;
   }
 }

@@ -1,7 +1,16 @@
+@import "@/styles/variables";
 @import '@/styles/mixins';
 
 .experience-card {
   position: relative;
+  border: 1px solid $color-primary;
+  box-shadow: 0 0 10px rgba(black, .25);
+  background-color: $color-surface;
+  color: $color-on-surface;
+
+  @each $name, $value in $association-colors {
+    --#{$name}: #{$value};
+  }
 
   @include respond-below(sm) {
     &::before {

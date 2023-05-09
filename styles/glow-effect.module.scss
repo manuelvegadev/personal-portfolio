@@ -1,27 +1,39 @@
+@import "@/styles/variables";
+
 .container {
   position: relative;
-  overflow: hidden;
   
   > * {
-    position: relative;
     z-index: 1;
   }
 }
 
 .effect {
   content: '';
-  opacity: 0;
   display: block;
-  width: 200vw;
-  aspect-ratio: 1/1;
-  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 50%);
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
   transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+    
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: radial-gradient(circle, $color-inverse-primary 0%, transparent 50%);
+    position: absolute;
+    top: var(--data-y);
+    left: var(--data-x);
+  }
 
   :hover > & {
-    opacity: 1;
+    opacity: .25;
   }
 }

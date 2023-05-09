@@ -8,12 +8,12 @@ import { Profile } from "@/types";
 import Head from "next/head";
 
 const fontSans = IBM_Plex_Sans({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["300", "400", "600"],
   subsets: ["latin"],
   variable: "--font-sans",
 });
 const fontMono = JetBrains_Mono({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["300", "400", "600"],
   subsets: ["latin"],
   variable: "--font-mono",
 });

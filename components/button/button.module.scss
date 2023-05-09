@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .button {
 
   background-color: white;
@@ -6,8 +8,8 @@
   transition: ease-in-out 150ms;
 
   &.whatsapp {
-    border-color: var(--color-whatsapp);
-    background-color: var(--color-whatsapp);
+    border-color: $color-whatsapp;
+    background-color: $color-whatsapp;
     color: #1c1e21;
     
     :hover > & {

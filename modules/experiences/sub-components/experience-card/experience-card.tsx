@@ -3,6 +3,9 @@ import { Tag } from "@/components";
 import { WorkExperience } from "@/types";
 import { getExperienceDuration } from "@/modules/experiences/utils";
 import styles from "./experience-card.module.scss";
+import glowStyles from "@/styles/glow-effect.module.scss";
+import { updateEffectPositionOnMouseMove } from "@/utils";
+import { useRef } from "react";
 
 interface IExperienceCardProps {
   experience: WorkExperience;
@@ -15,6 +18,9 @@ export function ExperienceCard({
   isLast,
   isFirst,
 }: IExperienceCardProps) {
+  const containerRef = useRef(null);
+  const effectRef = useRef(null);
+
   return (
     <div
       className={classNames([
@@ -27,13 +33,14 @@ export function ExperienceCard({
         "d-flex",
         "gap-4",
         "flex-column",
+        glowStyles.container,
       ])}
-      style={{
-        backgroundColor: "#252625",
-        boxShadow: "0 0 10px rgba(0,0,0,.25)",
-        border: "1px solid var(--color-primary)",
+      ref={containerRef}
+      onMouseMove={(e) => {
+        updateEffectPositionOnMouseMove({ event: e, containerRef, effectRef });
       }}
     >
+      <div className={glowStyles.effect} ref={effectRef} />
       {isFirst ? <span className={styles["future-emoji"]}>🚀</span> : null}
       {isLast ? <span className={styles["beginnings-emoji"]}>👶</span> : null}
       <span className={classNames(["fs-5", "fw-bold", "font-mono"])}>

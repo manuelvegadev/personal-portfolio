@@ -18,12 +18,12 @@ export function updateEffectPositionOnMouseMove({
     const { clientX, clientY } = event.nativeEvent;
 
     const { top, left } = $container.getBoundingClientRect();
-    const { width, height } = $effect.getBoundingClientRect();
+    const { width } = $effect.getBoundingClientRect();
 
     const x = clientX - left - width / 2;
-    const y = clientY - top - height / 2;
+    const y = clientY - top - width / 2;
 
-    $effect.style.left = `${x}px`;
-    $effect.style.top = `${y}px`;
+    $effect.style.setProperty("--data-x", `${x.toFixed()}px`);
+    $effect.style.setProperty("--data-y", `${y.toFixed()}px`);
   }
 }
