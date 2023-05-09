@@ -103,7 +103,7 @@ export function Hero({ data }: { data: Profile }) {
               "d-lg-block",
             ])}
           >
-            <Image
+            <img
               className={classNames([
                 styles["hero__profile-photo"],
                 "rounded-circle",
@@ -111,8 +111,6 @@ export function Hero({ data }: { data: Profile }) {
               ])}
               src={data["photo-url"]}
               alt={"Profile picture"}
-              width={322}
-              height={322}
             />
           </div>
         </section>
