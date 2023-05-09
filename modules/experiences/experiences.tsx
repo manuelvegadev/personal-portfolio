@@ -1,9 +1,7 @@
 import classNames from "classnames";
-import { Fragment } from "react";
 import { Profile } from "@/types";
-import { ExperienceCard } from "@/modules/experiences/sub-components";
-import { getExperienceDuration } from "@/modules/experiences/utils";
 import styles from "./experiences.module.scss";
+import { Experience } from "@/modules/experiences/sub-components/experience/experience";
 
 export function Experiences({ data }: { data: Profile }) {
   return (
@@ -51,38 +49,13 @@ export function Experiences({ data }: { data: Profile }) {
               "my-sm-0",
             ])}
           >
-            {data["work-experience"].map((experience, index, array) => {
-              const isLast = index === array.length - 1;
-              const isFirst = index === 0;
-
-              return (
-                <Fragment key={index}>
-                  <div
-                    className={classNames([
-                      styles["we-mark"],
-                      { [styles["we-mark--last"]]: isLast },
-                      { [styles["we-mark--first"]]: isFirst },
-                    ])}
-                  >
-                    <span className={styles["we-mark__dot"]} />
-                    <span
-                      className={classNames([
-                        "opacity-75",
-                        "d-none",
-                        "d-md-inline-block",
-                      ])}
-                    >
-                      {getExperienceDuration(experience)}
-                    </span>
-                  </div>
-                  <ExperienceCard
-                    experience={experience}
-                    isLast={isLast}
-                    isFirst={isFirst}
-                  />
-                </Fragment>
-              );
-            })}
+            {data["work-experience"].map((experience, index) => (
+              <Experience
+                experiences={data["work-experience"]}
+                index={index}
+                key={index}
+              />
+            ))}
           </div>
         </section>
       </div>

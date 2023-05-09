@@ -23,7 +23,7 @@
     backdrop-filter: saturate(180%) blur(5px);
     backface-visibility: hidden;
     z-index: -1;
-    top: -1px;
+    top: 0;
     transform: translateZ(0);
   }
 }

@@ -1,12 +1,10 @@
 import classNames from "classnames";
 import Link from "next/link";
 import styles from "./header.module.scss";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export function Header() {
-  const { asPath } = useRouter();
-  const [currentHash, setCurrentHash] = useState(asPath.split("/").at(-1));
+  const [currentHash, setCurrentHash] = useState("");
 
   const navItems = [
     { href: "#", text: "Home" },

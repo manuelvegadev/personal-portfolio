@@ -1,22 +1,23 @@
+import { useRef } from "react";
 import classNames from "classnames";
 import { Tag } from "@/components";
 import { WorkExperience } from "@/types";
-import { getExperienceDuration } from "@/modules/experiences/utils";
+import { updateEffectPositionOnMouseMove } from "@/utils";
 import styles from "./experience-card.module.scss";
 import glowStyles from "@/styles/glow-effect.module.scss";
-import { updateEffectPositionOnMouseMove } from "@/utils";
-import { useRef } from "react";
 
 interface IExperienceCardProps {
   experience: WorkExperience;
   isLast?: boolean;
   isFirst?: boolean;
+  experienceDuration: string;
 }
 
 export function ExperienceCard({
   experience,
   isLast,
   isFirst,
+  experienceDuration,
 }: IExperienceCardProps) {
   const containerRef = useRef(null);
   const effectRef = useRef(null);
@@ -55,7 +56,7 @@ export function ExperienceCard({
       <span
         className={classNames(["opacity-75", "d-inline-block", "d-md-none"])}
       >
-        {getExperienceDuration(experience)}
+        {experienceDuration}
       </span>
       {experience.description ? (
         <p className={classNames(["fs-6", "m-0", "opacity-75"])}>

@@ -1,14 +1,14 @@
 import path from "path";
 import { promises as fs } from "fs";
+import Head from "next/head";
 import { GetStaticProps } from "next";
 import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import classNames from "classnames";
 import { Cta, Experiences, Header, Hero, Footer } from "@/modules";
 import { Profile } from "@/types";
-import Head from "next/head";
 
 const fontSans = IBM_Plex_Sans({
-  weight: ["300", "400", "600"],
+  weight: ["400", "600"],
   subsets: ["latin"],
   variable: "--font-sans",
 });
